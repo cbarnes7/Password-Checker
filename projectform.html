@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{page_title}}</title>
+</head>
+<body>
+	<form action="gresponse" method="post">
+		<label for="password" >What do you want your photos of?</label><br>
+		<input type="text" name="password"  value="password">Horses</input><br>
+		<input type="submit" value="Check this password's safety!" name="gobtn"/>
+	</form>
+	{% if prompt %}
+	<div class= 'formtitle'>{{prompt}}</div>
+	{% endif %}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{page_title}}</title>
+</head>
+<body>
+    <h1>Your Password is Not Safe!</h1>
+    <p>We found your password in {{breachcount}} data breaches! You need to change your password to keep your data
+        secure.</p>
+    <h2>Password Change Suggestions</h2>
+    <p>Looks like your password has {{digits}} digits, {{alphabet}} letters, {{special}} special characters, and
+        is {{length}} long.</p>
+    {% if {{digits}} == 0 %}
+    <p>Your password has no numbers. For a secure password, we recommend including some numbers throughout your
+        password.</p>
+    {% endif %}
+    {% if {{alphabet}} == 0 %}
+    <p>Your password has no letters. For a secure password, we recommend including some letters, both lowercase
+        and uppercase throughout your password.</p>
+    {% endif %}
+    {% if {{special}} == 0 %}
+    <p>Your password has no special. For a secure password, we recommend including some special characters,
+        throughout your password.</p>
+    {% endif %}
+    {% if {{length}} < 8 %}
+    <p>Your password is a little too short to be secure. We recommend making your password longer than 8 characters
+        for maximum strength.</p>
+    {% endif %}
+
+    <input type="submit" value="Check Another Password" name="checkbtn"/>
+</body>
+</html>
